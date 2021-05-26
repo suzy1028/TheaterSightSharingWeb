@@ -2,9 +2,9 @@ package com.suziye.TheaterSightSharingWeb.Theater.Dao;
 
 import java.util.List;
 
-import com.suziye.TheaterSightSharingWeb.Theater.Theater;
+import com.suziye.TheaterSightSharingWeb.Theater.Vo.TheaterVo;
 
 public interface ITheaterDao {
-	List<Theater> selectAll();
+	List<TheaterVo> selectTheaterList() throws Exception;
 
 }

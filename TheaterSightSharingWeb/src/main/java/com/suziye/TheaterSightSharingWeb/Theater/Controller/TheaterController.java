@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.suziye.TheaterSightSharingWeb.Theater.Theater;
 import com.suziye.TheaterSightSharingWeb.Theater.Service.TheaterService;
+import com.suziye.TheaterSightSharingWeb.Theater.Vo.TheaterVo;
 
 @Controller
 @RequestMapping("/theater")
@@ -27,13 +27,13 @@ public class TheaterController {
 	}
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public ModelAndView index() {
-		List<Theater> theaters=service.theaterGetList();
+	public ModelAndView index() throws Exception {
+		List<TheaterVo> theaters=service.getTheaterList();
 		
 		ModelAndView mav=new ModelAndView();
 		
 		mav.addObject("theaters",theaters);
-		mav.setViewName("/main");
+		mav.setViewName("theater/main");
 		
 		
 		return mav;

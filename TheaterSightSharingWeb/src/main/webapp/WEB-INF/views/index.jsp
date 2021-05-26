@@ -17,6 +17,8 @@
 	<h1>Hello world!</h1>
 
 	<P>The time on the server is ${serverTime}.</P>
+	
+	<a href="${cp}/theater/">이동</a>
 
 	<!-- <script type="text/javascript">
 	location.href="";
