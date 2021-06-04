@@ -8,6 +8,7 @@ public class TheaterVo {
 	private String theaterLog;
 	private String address;
 	private int seats;
+	private int seatingCapacity;
 	
 	
 	public String getTheaterId() {
@@ -51,6 +52,12 @@ public class TheaterVo {
 	}
 	public void setTheaterName(String theaterName) {
 		this.theaterName = theaterName;
+	}
+	public int getSeatingCapacity() {
+		return seatingCapacity;
+	}
+	public void setSeatingCapacity(int seatingCapacity) {
+		this.seatingCapacity = seatingCapacity;
 	}
 	
 	

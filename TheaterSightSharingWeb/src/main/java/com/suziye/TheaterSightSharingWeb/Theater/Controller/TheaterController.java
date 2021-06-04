@@ -38,4 +38,15 @@ public class TheaterController {
 		
 		return mav;
 	}
+	
+	@RequestMapping(value = "/theaterView",method = RequestMethod.GET)
+	public ModelAndView theaterPage(String id) {
+		
+		ModelAndView mav=new ModelAndView();
+		
+		mav.addObject(id, mav);
+		mav.setViewName("theater/theaterView");
+		return mav;
+		
+	}
 }
